@@ -14,7 +14,7 @@
   <%= f.submit "submit" %>
 <% end %>
 
-<div id="postResult">
+<div id="productResult">
   <h2 id="postTitle"></h2>
   <p id="postBody"></p>
 </div>
@@ -28,7 +28,9 @@
       posting.done(function(data) {
         var product = data;
         $("#productName").text(product["name"])
-        $("#postBody").text(post["description"])
+        $("#productPrice").text(product["price"])
+        $("#productName").text(product["name"])
+        $("#productName").text(product["name"])
       })
     });
   });
