@@ -24,10 +24,10 @@
     $('form').submit(function(event) {
       event.preventDefault();
       var values = $(this).serialize();
-      var posting = $.post('/posts', values);
+      var posting = $.product('/products', values);
       posting.done(function(data) {
-        var post = data;
-        $("#postTitle").text(post["title"])
+        var product = data;
+        $("#productName").text(product["name"])
         $("#postBody").text(post["description"])
       })
     });
